@@ -48,7 +48,6 @@ var cLay = L.geoJSON(countries, {
                 var gifUrl = 'https://bestanimations.com/media/fireworks2/367172827red-green-firework-explosions.gif'; 
 
                 showTemporaryGIF(gifUrl, 7)
-                shuffle()
           } else if (typeof ranCN === "undefined" ) {
             message = "At least Shuffle first, IDIOT!!!";
             addItemToList("You chose before shuffling.")
@@ -151,33 +150,11 @@ function showAnswer(){
 }
 
 function addItemToList(text) {
-  // Get the existing list
   var list = document.getElementById("hist");
-
-  // Create a new list item
   var li = document.createElement("li");
-
-  // Create a text node with the new item
   var textNode = document.createTextNode(text); 
 
-  // Append the text node to the list item
   li.appendChild(textNode);
 
-  // Append the list item to the list
   list.appendChild(li);
-}
-
-//* Set the width of the sidebar to 250px (show it) */
-function openNav() {
-  document.getElementById("mySidepanel").style.width = "250px";
-}
-
-function openNav2() {
-  document.getElementById("mySidepanel").style.width = "250px";
-  // document.getElementById("mySidepanel").style.marginLeft = "250px";
-}
-
-/* Set the width of the sidebar to 0 (hide it) */
-function closeNav() {
-  document.getElementById("mySidepanel").style.width = "0";
 }
