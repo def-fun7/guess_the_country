@@ -22,27 +22,45 @@
       <div id="helpd" class="dropdown">
         <button title="Help" class="dropbtn"><i class="fa fa-info-circle"></i></button> 
         <div class="dropdown-content">
-        <a href="#">To be Written</a>
+        <h4 style="color: black; text-align:center ;">How to Play</h4>
+        <ul title="instruction">
+          <li>Click on Shuffle and the name of the Country you are supposed to find will appear in place of "Let's Start".</li>
+          <li>Click on the feature in the below map, which you think is the right answer.</li>
+          <li>A popup will appear where you clicked.</li>
+          <li>If you are sure this is the right answer, then click "Choose".</li>
+          <li>If your answer was correct or wrong then, a text line will appear accordingly on top of the map as well as a gif will play in the map frame for couple of seconds.</li>
+          <li>Please, let the gif end before retrying.</li>
+          <li>Clicking on "Go back" will zoom out the map to intial zoom level (1) and set (0, 0) as center.</li>
+          <li>If your answer was right, the win counter will go one number up, else the lose counter.</li>
+          <li>You can try for a country as many times as you like, however, it could cause site to halt.</li>
+          <li>Shuffling without choosing any answer, will cause the skip counter to count and will not be consider as a lose point.</li>
+          <li>You tries can be seen in the History on top right corner.</li>
+          <li>Reset button or refreshing the page will clear everything, including score. The webpage doesn't store any kind of personal information from you.</li>
+          <li>For more Information, check <a href="https://github.com/def-fun7/p_c/blob/main/README.md"> README</a></li>
+
+
+        </ul>
         </div>
       </div>    
       
       <h1>Guess the Country</h1>
       
         <div id="helpd" class="dropdown">
-          <button title="Help" class="dropbtn"><i class="fa fa-history"></i></button> 
-          <div class="dropdown-content">
-          <a href="#"><ul id="myList"></ul></a>
+          <button title="History" class="dropbtn"><i class="fa fa-history"></i></button> 
+          <div class="dropdown-content-left">
+            <h4 style="color: black; text-align:center ;">History</h4>
+              <ul id="hist"></ul>
           </div>
         </div>    
       
     </div>
     <div>
         <div class="container-head">
-          <button class="circular-button-red" style="float: left;" onclick="window.location.reload();">Refresh</button>
+          <button class="circular-button-red" style="float: left;" onclick="window.location.reload();">Reset</button>
           <h2><div id="randomcN">Let's Start</div></h2>
-          <button class="circular-button" style="float: right;" onclick="generateRandomcN()">Shuffle</button>
+          <button class="circular-button" style="float: right;" onclick="shuffle()">Shuffle</button>
         </div>
-        <h5 id="ans"> Shuffle to see status. </h5>
+        <h5 id="ans"> Shuffle to Start!!! </h5>
     </div>
 
     <div id="map"></div>

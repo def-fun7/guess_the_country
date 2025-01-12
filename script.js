@@ -42,19 +42,23 @@ var cLay = L.geoJSON(countries, {
         chooseButton.onclick = function() {
           
           if (ranCN === feature.properties.ADMIN) {
-                message = "Yes";
+                message = "WOW, You Found " + ranCN;
+                addItemToList(message)
                 countNum('win')
                 var gifUrl = 'https://bestanimations.com/media/fireworks2/367172827red-green-firework-explosions.gif'; 
 
                 showTemporaryGIF(gifUrl, 7)
-          } else if (typeof ranCN === "undefined") {
-            message = "At least Shuffle first, idiot!!!";
+                shuffle()
+          } else if (typeof ranCN === "undefined" ) {
+            message = "At least Shuffle first, IDIOT!!!";
+            addItemToList("You chose before shuffling.")
             var gifUrl = 'https://c.tenor.com/-isbpihSHoQAAAAd/idiot-stupid.gif'; 
 
             showTemporaryGIF(gifUrl, 7)
           
           } else {
-            message = "No";
+            message = "You picked the Wrong Country...";
+            addItemToList("you picked " + feature.properties.ADMIN +" as " + ranCN)
             countNum('lose')
             var gifUrl = 'https://gifdb.com/images/high/tongue-out-teasing-playful-goofy-bear-fart-hjx2tcoixrtq09vi.gif'; 
 
@@ -79,10 +83,9 @@ var cLay = L.geoJSON(countries, {
 ).addTo(map)
 
 let ranCN;
-function generateRandomcN() {
+function shuffle() {
   map.setView([0, 0], 1);
   map.closePopup();
-  addItemToList('you shuff');
   if (document.getElementById('ans').innerText = "waiting") {
       countNum('skip')
   }
@@ -90,7 +93,8 @@ function generateRandomcN() {
     const randomcN= cN[randomIndex];
     ranCN = randomcN
     document.getElementById('randomcN').innerText = "Find "+ randomcN;
-    document.getElementById('ans').innerText = "waiting"
+    document.getElementById('ans').innerText = "Click on the Country";
+    addItemToList("You shuffled and got " + ranCN);
 }
 
 function getRandomColor() {
@@ -119,9 +123,9 @@ function showTemporaryGIF(gifUrl, time) {
   var gifOverlay = L.imageOverlay(gifUrl, bounds).addTo(map);
 
   setTimeout(function() {
-    map.removeLayer(Stadia_StamenTonerBackground);
+    map.removeLayer(Esri_WorldImagery);
     map.removeLayer(gifOverlay);
-    map.addLayer(Stadia_StamenTonerBackground);
+    map.addLayer(Esri_WorldImagery);
   }, time*1000);
 }  
 
@@ -136,17 +140,19 @@ function countNum(id){
 
 function showAnswer(){
   countNum('lose')
+  addItemToList("You gave up Looking for " + ranCN + " !!!")
   var featureToZoom = cLay.getLayers().find(function(layer) {
     return layer.feature.properties.ADMIN === ranCN; // Replace with the desired feature name
   });
   map.fitBounds(featureToZoom.getBounds());
   featureToZoom.bindPopup(ranCN + 'is HERE dude').openPopup()
-  
+  document.getElementById('randomcN').innerText = "Shuffle Again";
+  document.getElementById('ans').innerText = "Shuffle to Restart!"
 }
 
 function addItemToList(text) {
   // Get the existing list
-  var list = document.getElementById("myList");
+  var list = document.getElementById("hist");
 
   // Create a new list item
   var li = document.createElement("li");

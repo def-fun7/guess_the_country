@@ -49,7 +49,7 @@ h5{
   height: 77px;
   margin:auto;
   border-radius: 50%;
-  background-color: #9ca19c; 
+  background-color: #8e84bb; 
   color: white;
   border: 3px solid;
   border-color: black;
@@ -197,9 +197,21 @@ h5{
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 360px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  align-items: end;
+}
+
+.dropdown-content-left {
+  display: none;
+  position: absolute;
+  background-color: #f7f4f4;
+  min-width: 360px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0%;
+  padding: 3px;
 }
 
 /* Links inside the dropdown */
@@ -215,6 +227,8 @@ h5{
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropdown-content-left {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #673e8e;}
