@@ -1,0 +1,220 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  background-color: #f0f0f0;
+}
+
+   
+#map {
+  position: sticky;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  height: 450px;
+}
+
+.container-head {
+  padding: 5px;
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: space-between; /* Space buttons evenly */
+  align-items: center; /* Center vertically */
+
+}
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 0px;
+}
+
+h2{
+  text-align: center;
+}
+h5{
+  margin: 0%;
+  text-align: center;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(177, 174, 174, 0.1);
+  border: 3px dashed;
+  border-color: #2e302e;
+
+}
+
+.circular-button {
+  width: 77px;
+  height: 77px;
+  margin:auto;
+  border-radius: 50%;
+  background-color: #9ca19c; 
+  color: white;
+  border: 3px solid;
+  border-color: black;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.circular-button:hover {
+  background-color: #2e302e;
+  transform: scale(1.5);
+}
+
+.circular-button-red { 
+  width: 77px;
+  height: 77px;
+  margin: auto;
+  border-radius: 50%;
+  background-color: red; 
+  color: white;
+  border: 3px solid;
+  border-color: black;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.circular-button-red:hover {
+  background-color: #8b0000; 
+  transform: scale(1.5);
+}
+  
+
+
+/* Popup styles */
+.leaflet-popup-content {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-popup-content p {
+  margin: 0;
+  text-align: center;
+}
+
+.leaflet-popup-buttons {
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+
+.leaflet-popup-buttons button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.leaflet-popup-buttons button:hover {
+  background-color: #45a049;
+}
+
+.container-count {
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.panel {
+  text-align: center;
+  border: 1px solid #302f2f;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.panel h3 {
+  margin-bottom: 10px;
+}
+
+.counter {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #1f1e1e;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+.rect{
+
+  text-align: center;
+  width: 600px;
+  /* height: 200px; */
+  margin: auto;
+  padding: 20px;
+  background-color: #eebaba; /* Green */
+  border: 1px dashed black;
+  border-spacing: 5px;
+
+}
+
+.answer { 
+  width: 250px;
+  height: 33px;
+  padding: 3px;
+  margin-top: 3px;
+  margin-left: 250px;
+  margin-bottom: 5px;
+  align-self: center;
+  border-radius: 10%;
+  background-color: red; 
+  color: white;
+  border: 3px solid;
+  border-color: black;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #0c0c0c;
+  color: white;
+  /* padding: 4px; */
+  
+  border-radius: 50%;
+  font-size: 33px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #673e8e;}
