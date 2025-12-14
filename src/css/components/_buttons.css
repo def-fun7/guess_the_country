@@ -1,0 +1,51 @@
+/* Styles for reusable buttons and interactive elements */
+
+.circular-button,
+.circular-button-red {
+  width: 77px;
+  height: 77px;
+  margin: auto;
+  border-radius: 50%;
+  color: white;
+  border: 3px solid;
+  border-color: black;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.circular-button {
+  background-color: #8e84bb;
+}
+
+.circular-button:hover {
+  background-color: #2e302e;
+  transform: scale(1.5);
+}
+
+.circular-button-red {
+  background-color: red;
+}
+
+.circular-button-red:hover {
+  background-color: #8b0000;
+  transform: scale(1.5);
+}
+
+.answer {
+  width: 250px;
+  height: 33px;
+  padding: 3px;
+  margin-top: 3px;
+  margin-left: 290px;
+  margin-bottom: 5px;
+  align-self: center;
+  border-radius: 10%;
+  background-color: red;
+  color: white;
+  border: 3px solid;
+  border-color: black;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
