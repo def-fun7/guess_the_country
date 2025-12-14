@@ -1,0 +1,131 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+#map {
+  width: 1000px;
+  height: 700px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 36px;
+  color: #f0db4f;
+  margin-bottom: 20px;
+}
+
+.circular-button, .answer {
+  background-color: #ffcc00;
+  color: #1f1f1f;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  padding: 20px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.circular-button:hover, .answer:hover {
+  background-color: #ff9933;
+  transform: scale(1.1);
+}
+
+.answer {
+  background-color: #e74c3c;
+  color: white;
+  margin-top: 20px;
+}
+
+.panel {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.counter {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#hist {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+}
+
+#hist li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.timer {
+  font-size: 48px;
+  font-weight: bold;
+  color: #00ff00;
+  text-shadow: 0 0 15px rgba(0, 255, 0, 0.7), 0 0 25px rgba(0, 255, 0, 0.5);
+  margin-top: 20px;
+  letter-spacing: 2px;
+  transition: color 1s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.timer.low {
+  color: #ff0000;
+  text-shadow: 0 0 15px rgba(255, 0, 0, 1), 0 0 25px rgba(255, 0, 0, 0.8);
+}
+
+.timer.countdown {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.container-count {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.circular-button, .answer {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.circular-button:active, .answer:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
