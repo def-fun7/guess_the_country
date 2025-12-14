@@ -11,7 +11,21 @@
 
 ---
 
+## 📝 Table of Contents
+
+* [🚀 Live Demo](#-live-demo)
+* [✨ Features](#-features)
+* [🛠️ Tech Stack](#️-tech-stack)
+* [🕹️ How to Play](#️-how-to-play)
+* [⚙️ Installation (Local Setup)](#️-installation-local-setup)
+* [🤝 Contributing](#-contributing)
+* [📄 License](#-license)
+
+---
+
 ## 🚀 Live Demo  
+
+![Live Demo](assets/live_demo.gif)
 
 👉 [Play it Here!](https://def-fun7.github.io/guess_the_country/)
 
@@ -51,12 +65,6 @@ This project began as an experiment in using GIS components in a web game — an
 
 ---
 
-## 📂 Project Structure
-
-. ├── assets/ ├── src/ │ ├── css/ │ │ └── main.css │ └── js/ │ ├── countries.js # GeoJSON data │ ├── effects.js # GIF & popup logic │ ├── game.js # Shuffle & scoring │ ├── main.js # Map initialization │ └── utils.js # Helper functions └── index.html
-
----
-
 ## 🛠️ Tech Stack
 
 | Technology     | Purpose |
@@ -68,9 +76,9 @@ This project began as an experiment in using GIS components in a web game — an
 
 ---
 
-# 📘 About *Country Quiz*
+## 📘 About *Country Quiz*
 
-## 🧭 History & Motivation  
+### 🧭 History & Motivation  
 
 The idea was to build a small web game that uses **real-world maps** — something GIS‑flavored but simple enough to complete.  
 After exploring a long list of ambitious ideas (see below), this one stood out as the most practical and fun.
@@ -88,7 +96,7 @@ This also served as a chance to experiment with **Leaflet overlays**, popups, an
 
 ---
 
-## 💡 Previous Ideas  
+### 💡 Previous Ideas  
 
 Before settling on Country Quiz, several other concepts were explored:
 
@@ -110,8 +118,8 @@ All fun ideas — but Country Quiz was the one that clicked.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/def-fun7/p_c.git
-   cd p_c
+   git clone https://github.com/def-fun7/guess_the_country.git
+   cd guess_the_country
 
 2. Open `index.html` in your browser.
 
