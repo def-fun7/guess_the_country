@@ -1,4 +1,4 @@
-# 🌍 Country Quiz
+# 🌍 Guess the Country
 
 ![Project Banner](assets/banner.png)
 
@@ -33,7 +33,7 @@
 
 ## ✨ Overview  
 
-**Country Quiz** is a lightweight, browser‑based geography game built using **Leaflet.js** and real-world GIS data.  
+**Guess the Country** is a lightweight, browser‑based geography game built using **Leaflet.js** and real-world GIS data.  
 Your mission is simple: **find the country shown in the prompt**.  
 Guess right → you win.  
 Guess wrong → enjoy a funny GIF and try again.
